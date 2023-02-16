@@ -1,15 +1,12 @@
 import React from "react";
-import HighlightIcon from "@material-ui/icons/Highlight";
+import Header from "./Components/Header/Header";
 
-function Header() {
+const App = () => {
   return (
-    <header>
-      <h1>
-        <HighlightIcon />
-        Keeper
-      </h1>
-    </header>
+    <div>
+      <Header />
+    </div>
   );
-}
+};
 
-export default Header;
+export default App;
