@@ -1,5 +1,5 @@
 import React from "react";
-import HighlightIcon from "@material-ui/icons/Highlight";
+const { HighlightIcon } = require("@material-ui/icons");
 
 function Header() {
   return (
