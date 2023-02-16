@@ -7,57 +7,32 @@ import "./note.css";
 const CreateNote = () => {
   const [isExpanded, setExpanded] = useState(false);
 
-  const [note, setNote] = useState({
-    title: "",
-    content: "",
-  });
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const form = e.target;
+    const title = form.title.value;
+    const content = form.content.value;
 
-  function handleChange(e: any) {
-    const { name, value } = e.target;
-
-    setNote((prevNote) => {
-      return {
-        ...prevNote,
-        [name]: value,
-      };
-    });
-  }
-
-  //   function submitNote(event) {
-  //     props.onAdd(note);
-  //     setNote({
-  //       title: "",
-  //       content: "",
-  //     });
-  //     event.preventDefault();
-  //   }
+    console.log(title, content);
+  };
 
   function expand() {
     setExpanded(true);
   }
 
   return (
-    <div>
-      <form className="create-note">
-        {isExpanded && (
-          <input
-            name="title"
-            // onChange={handleChange}
-            value={note.title}
-            placeholder="Title"
-          />
-        )}
+    <div className="w-[90%]   lg:w-1/2 mx-auto ">
+      <form className="create-note relative" onSubmit={handleSubmit}>
+        {isExpanded && <input name="title" placeholder="Title" />}
 
         <textarea
           name="content"
           onClick={expand}
-          onChange={handleChange}
-          value={note.content}
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
-        <Zoom in={isExpanded} className="hover:bg-black">
-          <Fab>
+        <Zoom in={isExpanded}>
+          <Fab type="submit">
             <AddIcon />
           </Fab>
         </Zoom>
