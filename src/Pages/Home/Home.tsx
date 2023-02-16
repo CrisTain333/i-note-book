@@ -1,9 +1,13 @@
 import CreateNote from "../../Components/CreateNote/CreateNote";
+import Notes from "../../Components/Notes/Notes";
 
 const Home = () => {
   return (
     <div>
       <CreateNote />
+      <div className="w-[90%] mx-auto mt-10">
+        <Notes />
+      </div>
     </div>
   );
 };
