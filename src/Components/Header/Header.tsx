@@ -3,7 +3,7 @@ import brandLogo from "../../assets/post-it.png";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-md fixed top-0 z-50">
+      <div className="navbar bg-base-100 ">
         <div className="flex-none">
           <button className="btn btn-square btn-ghost lg:hidden">
             <svg

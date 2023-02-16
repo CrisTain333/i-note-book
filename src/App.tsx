@@ -1,13 +1,12 @@
 import React from "react";
-import CreateNote from "./Components/CreateNote/CreateNote";
-import Header from "./Components/Header/Header";
+import { RouterProvider } from "react-router-dom";
+import router from "./Routes/routes";
 
 const App = () => {
   return (
-    <div className="h-screen">
-      <Header />
-      <CreateNote />
-    </div>
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
   );
 };
 
