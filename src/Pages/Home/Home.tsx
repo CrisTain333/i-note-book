@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <CreateNote />
-      <div className="w-[90%] mx-auto mt-10">
+      <div className="w-[90%] mx-auto mt-10 ">
         <Notes />
       </div>
     </div>
